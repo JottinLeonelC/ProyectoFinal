@@ -65,9 +65,9 @@ public class Contacto {
 
     @Override
     public String toString() {
-        return  id + "\t\t\t" +
-                nombre + "\t\t\t" +
-                apellido + "\t\t\t" +
+        return  id + "\t" +
+                nombre + "\t\t\t\t" +
+                apellido + "\t\t\t\t" +
                 telefono;
     }
 }

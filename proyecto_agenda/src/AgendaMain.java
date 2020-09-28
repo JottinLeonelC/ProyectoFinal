@@ -5,6 +5,7 @@ import View.Menu;
 
 public class AgendaMain {
 
+    static int idContador = 11;
 
     public static void main(String[] args) {
         int decision;
@@ -15,6 +16,8 @@ public class AgendaMain {
 
         Agenda agendaTelefonica = new Agenda();
         Contacto c;
+
+        agendaTelefonica.precargaContactos();
 
         Menu.menu();
         decision = scanner.entrada().nextInt();
@@ -53,11 +56,12 @@ public class AgendaMain {
                     apellido = scanner.entrada().nextLine();
                     System.out.printf("Telefono: ");
                     telefono = scanner.entrada().nextLine();
-                    System.out.printf("ID: ");
-                    id = scanner.entrada().nextInt();
+                    /*System.out.printf("ID: ");
+                    id = scanner.entrada().nextInt();*/
 
-                    c = new Contacto(name, apellido, telefono, id);
+                    c = new Contacto(name, apellido, telefono, idContador);
                     agendaTelefonica.addContacto(c);
+                    idContador++;
                     System.out.println("Desea agregar otro contacto?\n1.Si\n2.No");
                     decision = scanner.entrada().nextInt();
                 }
@@ -85,8 +89,7 @@ public class AgendaMain {
                 System.out.printf("ID: ");
                 id = scanner.entrada().nextInt();
 
-                c = new Contacto(id);
-                agendaTelefonica.eliminarContacto(c);
+                agendaTelefonica.eliminarContacto(id);
 
             }
 

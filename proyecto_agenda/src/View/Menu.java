@@ -3,7 +3,7 @@ package View;
 public class Menu {
 
     public static void menu(){
-        System.out.println("\t\t\tAGENDA");
+        System.out.println("\n\t\t\tAGENDA");
         System.out.println("");
         System.out.println("Menu");
         System.out.println("1. Listar todos los contactos.");
@@ -15,7 +15,7 @@ public class Menu {
     }
 
     public static void agendaDesplegue(){
-        System.out.println("ID\t\t\tNombre\t\t\tApellido\t\t\tNumero telefonico");
+        System.out.println("ID\t\tNombre\t\t\tApellido\t\t\tNumero telefonico");
 
     }
 }
